@@ -23,51 +23,58 @@
       width:748px;
       height:748px;
       
-      background-color: #F0F1EC;
+      background-color: #000;
 
       display: grid;
-      grid-template-rows: 414px 315px  ;
-      grid-template-columns: 320px 428px ;
+      grid-template-rows: 414px 130px 155px 20px ;
+      grid-template-columns: 320px 198px 153px 50px;
+      gap: 9px;
+
+    }
+    .itemidk{
+      background-color: #F0F1EC;
 
     }
 
     .red{
       background-color: #E72F24;
       
-      border-right: 9px solid black;
-      border-bottom: 9px solid black;
+
 
 
 
     }
     .blankright{
-      border-bottom: 9px solid black;
+      background-color: #F0F1EC;
+      grid-column: span 3;
+
+     
+      
 
     }
     .blankbotleft{
+      background-color: #F0F1EC;
+      grid-row: span 2;
       
-      border-bottom: 9px solid black;
-      border-right: 9px solid black;
+   
       
 
 
     }
 
     .blankbotright{
-      
-      
-      border-right: 9px solid black;
-      border-bottom: 9px solid black;
-
-
-
-
-    }
-
-    .lastwhite{
       background-color: #F0F1EC;
+      grid-row: span 2;
+      grid-column: span 2;
+
+      
+
+
+
+
     }
 
+    
     .blue{
       background-color: #004592;
       
@@ -75,6 +82,12 @@
 
 
     }
+    .lastwhite{
+      background-color: #F0F1EC;
+      grid-row: span 2;
+      
+    }
+
 
     .yellow{
       background-color: #F9D01E;
@@ -84,7 +97,6 @@
 
     .black{
       background-color: #232629;
-     
 
     }
 
@@ -106,6 +118,8 @@
     <div class = "blue">     </div>
 
     <div class = "lastwhite"> </div>
+
+    <div class= "itemidk"> </div>
 
     <div class = "yellow">     </div>
 

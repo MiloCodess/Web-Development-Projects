@@ -1,0 +1,42 @@
+body{
+    background-color: #ebe9e1;
+}
+
+.averia-serif-libre-light {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 300;
+    font-style: normal;
+ }
+  
+  .averia-serif-libre-regular {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .averia-serif-libre-bold {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .averia-serif-libre-light-italic {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .averia-serif-libre-regular-italic {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .averia-serif-libre-bold-italic {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  
+  

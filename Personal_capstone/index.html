@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Arjana</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        </style>
+       
+        <style>
+            
+            .upperdiv{
+                display: flex;
+                flex-direction: row;
+                gap: 50px;
+                padding-top: 20px;
+                padding-bottom: 25px;
+          
+                
+                
+
+            }
+            
+
+            :root {
+                --bg-color: #000000;
+                --fg-color: rgba(255, 255, 255, 0.9);
+                --bd-color: rgba(255, 255, 255, 0.2);
+                
+                    --default-bg: 
+                    linear-gradient(322deg, #711DB0, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(322deg, #C21292, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(178deg, #EF4040, rgba(0, 138, 255, 0) 65%), 
+                    linear-gradient(24deg, #FFA732, rgba(0, 255, 198, 0) 65%),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+                    
+                    --default2-bg: 
+                    linear-gradient(322deg, #0579ff, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(322deg, #ef32bd, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(178deg, #ca1616, rgba(0, 138, 255, 0) 65%), 
+                    linear-gradient(24deg, #4209a5, rgba(0, 255, 198, 0) 65%),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+
+                    --default3-bg: 
+                    linear-gradient(322deg, #f4790e, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(322deg, #13a511, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(178deg, #f9e906, rgba(0, 138, 255, 0) 65%), 
+                    linear-gradient(24deg, #ee0a0a, rgba(0, 255, 198, 0) 65%),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+                    
+                    }
+            
+
+            .middiv{
+                background-color: #FFA732;
+                height: 300px;
+                width: auto;
+                
+            }
+
+html {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  min-height: 100vh;
+  margin:0;
+  padding:0;
+  
+  
+  place-content: center;
+  grid-template-columns: repeat(3, max-content);
+  gap: 1rem;
+  
+  background: var(--bg-color);
+  
+  font-family: "Montserrat", sans-serif;
+}
+
+#C{
+  position: relative;
+
+}
+
+a {
+  position: relative;
+  
+  padding: 0.25rem 1rem;
+  
+  text-decoration: none;
+  color: var(--fg-color);
+  
+  border: 2px solid rgb(255, 255, 255);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+b{
+  position: relative;
+  
+  padding: 0.25rem 1rem;
+  
+  text-decoration: none;
+  color: var(--fg-color);
+  
+  border: 2px solid rgb(255, 255, 255);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+a::before {
+  content: '';
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  
+  background: var(--default-bg);
+  
+  z-index: -1;
+  
+  transition: clip-path 1000ms ease-out;
+}
+
+b::before {
+  content: '';
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  
+  background: var(--default2-bg);
+  
+  z-index: -1;
+  
+  transition: clip-path 1000ms ease-out;
+}
+
+
+
+
+
+a.slant::before {
+  clip-path: path('M0 0C8.33 -8.33 16.67 -12.5 25 -12.5C37.5 -12.5 36.57 -0.27 50 0C63.43 0.27 62.5 -34.37 75 -34.37C87.5 -34.37 87.5 -4.01 100 0C112.5 4.01 112.38 -18.34 125 -18.34C137.62 -18.34 138.09 1.66 150.48 0C162.86 -1.66 162.16 -25 174.54 -25C182.79 -25 191.28 -16.67 200 0L200 200L0 200L0 0Z');
+}
+b.slant::before {
+  clip-path: path('M0 0C8.33 -8.33 16.67 -12.5 25 -12.5C37.5 -12.5 36.57 -0.27 50 0C63.43 0.27 62.5 -34.37 75 -34.37C87.5 -34.37 87.5 -4.01 100 0C112.5 4.01 112.38 -18.34 125 -18.34C137.62 -18.34 138.09 1.66 150.48 0C162.86 -1.66 162.16 -25 174.54 -25C182.79 -25 191.28 -16.67 200 0L200 200L0 200L0 0Z');
+}
+
+
+a.slant:hover::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+b.slant:hover::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+
+
+a.slant:active::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+b.slant:active::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+
+
+
+a.liquid::before {
+  clip-path: path('M0 -0.12C8.33 -8.46 16.67 -12.62 25 -12.62C37.5 -12.62 35.91 0.15 50 -0.12C64.09 -0.4 62.5 -34.5 75 -34.5C87.5 -34.5 87.17 -4.45 100 -0.12C112.83 4.2 112.71 -17.95 125 -18.28C137.29 -18.62 137.76 1.54 150.48 -0.12C163.19 -1.79 162.16 -25.12 174.54 -25.12C182.79 -25.12 191.28 -16.79 200 -0.12L200 -34.37L0 -34.37L0 -0.12Z');
+}
+b.liquid::before {
+  clip-path: path('M0 -0.12C8.33 -8.46 16.67 -12.62 25 -12.62C37.5 -12.62 35.91 0.15 50 -0.12C64.09 -0.4 62.5 -34.5 75 -34.5C87.5 -34.5 87.17 -4.45 100 -0.12C112.83 4.2 112.71 -17.95 125 -18.28C137.29 -18.62 137.76 1.54 150.48 -0.12C163.19 -1.79 162.16 -25.12 174.54 -25.12C182.79 -25.12 191.28 -16.79 200 -0.12L200 -34.37L0 -34.37L0 -0.12Z');
+}
+
+
+
+a.liquid:hover::before {
+  clip-path: path('M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z');
+}
+b.liquid:hover::before {
+  clip-path: path('M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z');
+}
+
+a.liquid:active::before {
+  clip-path: ellipse(
+    100% 0%
+    at
+    50% 0%
+  );
+}
+b.liquid:active::before {
+  clip-path: ellipse(
+    100% 0%
+    at
+    50% 0%
+  );
+}
+
+a.wave-link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  overflow: hidden;
+    padding: 7px 0;
+}
+b.wave-link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  overflow: hidden;
+    padding: 7px 0;
+}
+
+
+a.wave-link:before {
+  content: '';
+  background: #FFF;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+b.wave-link:before {
+  content: '';
+  background: #FFF;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+
+.link__graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 1px;
+}
+.link__graphic--slide {
+    top: -3px;
+    stroke-width: 2px;
+    transition: transform 0.7s;
+    transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+a.wave-link:hover .link__graphic--slide {
+  transform: translate3d(-66.6%, 0, 0);
+}
+b.wave-link:hover .link__graphic--slide {
+  transform: translate3d(-66.6%, 0, 0);
+}
+
+                        
+                        
+
+        </style>
+        
+
+
+    </head>
+
+    <body>
+
+        <div class="upperdiv" >
+            <a href="#"
+                
+                    
+                    href="#"
+                    
+                    class="liquid"
+                    
+                    
+                    
+                    >Socials</a>
+
+                    
+            </a>
+
+            <a href="#"
+        
+                href="#"
+                class="liquid">Bio</a>
+
+                
+            </a>
+
+            <a href="#"
+        
+                href="#"
+                class="liquid">Resume
+            </a>
+
+            <b  href="#"
+            
+
+                href="#"
+                
+                class="liquid" id="C">bitch
+            </b>
+
+
+           
+
+            
+
+        </div>
+        
+
+        <div class="middiv">
+
+        </div>
+
+        
+    </a>
+    
+
+        
+            
+
+
+
+
+
+    </body>
+
+</html>

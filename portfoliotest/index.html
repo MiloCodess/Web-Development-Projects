@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <title>Spooky Story</title>
+  <style>
+          
+          
+    @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+</style>
+  <style>
+    .lowerdiv{
+    color: white;
+    padding-top: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+
+
+    }
+    .middiv{
+              display: flex;
+              justify-content: center;
+                
+                padding-top: 1000px;
+                width: auto;
+
+                
+            }
+    .profile{
+       
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            z-index: 2;
+           
+          }
+    .mid2div{
+              display: flex;
+              justify-content: center;
+             
+              padding-left: 150px;
+              padding-right: 150px;
+              width: auto;
+              color: white;
+              text-align: center;
+
+    }
+    
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    body {
+        font-family: Averia Serif Libre;
+        background: radial-gradient(ellipse at bottom, #627d34 0%, #090A0F 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-weight: 400;
+        font-style: normal;
+      
+        font-size: 34px;
+    }
+
+    .wrapper, .content {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .intro {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ff0000;
+    }
+
+    .intro h1 {
+        font-size: 40px;
+        font-family: "Beth Ellen", cursive;
+    }
+
+    .intro p {
+        font-size: 60px;
+        font-family: "Chelsea Market", system-ui;
+        font-weight: bolder;
+    }
+
+    .content {
+        overflow-x: hidden;
+    }
+
+    .content .section {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        perspective: 500px;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .test {
+        position: relative;
+        color: white;
+        top: -30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 45px;
+        color: #ff9605c4;
+    }
+
+    
+
+   
+
+    #title {
+        font-family: Averia Serif Libre;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        color: #000000;
+        text-align: center;
+      
+        font-weight: 300;
+        font-size: 50px;
+        letter-spacing: 10px;
+        margin-top: -60px;
+        padding-left: 10px;
+    }
+
+  
+
+    @keyframes animStar {
+        from {
+            transform: translateY(0px);
+        }
+        to {
+            transform: translateY(-6000px); /* Matches the increased height */
+        }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="intro">
+    <h1></h1>
+  </div>
+  <div class="content">
+    <section class="section hero"></section>
+    <section class="section gradient-purple"></section>
+    <section class="section gradient-blue">
+      <div class="test">
+     
+      </div>
+      <div class="middiv">
+          
+        <img class="profile" src="./images/Screenshot 2024-08-13 at 5.17.13 PM.png"/>
+      </div>
+
+      <div class="mid2div">
+        <h1>
+          Hello.
+
+
+        </h1>
+        
+
+
+      </div>
+      <div class="mid2div">
+        <h1>
+          I am a sophemore at University Of Kentucky pursuing computer science, I enjoy web development and ping pong.
+
+
+        </h1>
+        
+
+
+      </div>
+      <div class="lowerdiv">
+        <h1>
+          My Skills
+        </h1>
+        <h1>
+          I have expirience in web development and online design, including HTML, CSS, bootstrap, and
+          several other tools. I am also currently studying computer systems and algorithms.
+        </h1>
+      </div>
+
+    </section>
+  </div>
+  <div class="image-container">
+    <img src="images/bbranch.png" alt="image">
+  </div>
+</div>
+
+
+<div id="title">
+    <span>Milo</span>
+    <br>
+    <span>Arjana</span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  window.addEventListener("load", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".wrapper",
+        start: "top top",
+        end: "+=150%",
+        pin: true,
+        scrub: true,
+        markers: false
+      }
+    })
+    .to("img", {
+      scale: 2,
+      z: 250,
+      transformOrigin: "center center",
+      ease: "power1.inOut"
+    })
+    .to(
+      ".section.hero",
+      {
+        scale: 1.4,
+        transformOrigin: "center center",
+        ease: "power1.inOut"
+      },
+      "<"
+    );
+
+    $(document).ready(function() {
+      $.fn.darkenScroll = function() {
+        var elem = $(this);
+        $(window).on('scroll', function() {
+          var scroll = $(document).scrollTop();
+          var offsetTop = elem.offset().top + elem.outerHeight();
+        });
+      };
+      $('.section.hero').darkenScroll();
+    });
+  });
+
+  
+
+  // Generate stars
+
+</script>
+
+</body>
+</html>

@@ -5,12 +5,87 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
         <title>Arjana</title>
         <style>
+          
+          
             @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
         </style>
-       
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
+          .profile{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            z-index: 2;
+           
+          }
+          
+          html {
+            height: 100%;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+            overflow: hidden;
+        }
+
+        #stars, #stars2, #stars3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparent;
+            z-index: 0;
+            animation: animStar 50s linear infinite;
+        }
+
+        #stars {
+            width: 1px;
+            height: 1px;
+            animation: animStar 50s linear infinite;
+        }
+
+        #stars2 {
+            width: 2px;
+            height: 2px;
+            animation: animStar 100s linear infinite;
+        }
+
+        #stars3 {
+            width: 3px;
+            height: 3px;
+            animation: animStar 150s linear infinite;
+        }
+
+        #title {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            color: #FFF;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            font-size: 50px;
+            letter-spacing: 10px;
+            margin-top: -60px;
+            padding-left: 10px;
+        }
+
+        #title span {
+            background: -webkit-linear-gradient(white, #38495a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes animStar {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(-2000px);
+            }
+        }
             
             .upperdiv{
                 display: flex;
@@ -38,35 +113,70 @@
                     linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
                     
                     --default2-bg: 
-                    linear-gradient(322deg, #0579ff, rgba(186, 74, 255, 0) 65%),
-                    linear-gradient(322deg, #ef32bd, rgba(186, 74, 255, 0) 65%),
-                    linear-gradient(178deg, #ca1616, rgba(0, 138, 255, 0) 65%), 
-                    linear-gradient(24deg, #4209a5, rgba(0, 255, 198, 0) 65%),
+                    linear-gradient(322deg, #fffC00, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(322deg, #ffffff, rgba(186, 74, 255, 0) 95%),
+                    linear-gradient(178deg, #FFFC00, rgba(0, 138, 255, 0) 95%), 
+                    linear-gradient(24deg, #ffffff, rgba(0, 255, 198, 0) 65%),
                     linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 
                     --default3-bg: 
-                    linear-gradient(322deg, #f4790e, rgba(186, 74, 255, 0) 65%),
-                    linear-gradient(322deg, #13a511, rgba(186, 74, 255, 0) 65%),
-                    linear-gradient(178deg, #f9e906, rgba(0, 138, 255, 0) 65%), 
-                    linear-gradient(24deg, #ee0a0a, rgba(0, 255, 198, 0) 65%),
+                    linear-gradient(322deg, #0048ff, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(322deg, #ffffff, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(178deg, #ffffff, rgba(0, 138, 255, 0) 65%), 
+                    linear-gradient(24deg, #0048ff, rgba(0, 255, 198, 0) 65%),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+                    
+                    --default4-bg: 
+                    linear-gradient(322deg, #313131, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(322deg, #5a009b, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(178deg, #934bff, rgba(0, 138, 255, 0) 65%), 
+                    linear-gradient(24deg, #575757, rgba(0, 255, 198, 0) 65%),
+                    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+                    
+
+                    --default5-bg: 
+                    linear-gradient(322deg, #ff9d00, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(322deg, #ffffff, rgba(186, 74, 255, 0) 65%),
+                    linear-gradient(178deg, #8f8f8f, rgba(0, 138, 255, 0) 65%), 
+                    linear-gradient(24deg, #000000, rgba(0, 255, 198, 0) 65%),
                     linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
                     
                     }
+                    
+                    
             
 
             .middiv{
-                background-color: #FFA732;
-                height: 300px;
-                width: auto;
+              display: flex;
+              justify-content: center;
                 
+                padding-top: 1000px;
+                width: auto;
+
+                
+            }
+            .mid2div{
+              display: flex;
+              justify-content: center;
+             
+              padding-left: 150px;
+              padding-right: 150px;
+              width: auto;
+              color: white;
+              text-align: center;
+
             }
 
 html {
   font-size: 20px;
   font-weight: 200;
+  height: 100%;
+  overflow-y: auto; 
+  
 }
 
 body {
+  background: radial-gradient(ellipse at bottom, #121836 0%, #090A0F 100%);
   min-height: 100vh;
   margin:0;
   padding:0;
@@ -78,13 +188,10 @@ body {
   
   background: var(--bg-color);
   
-  font-family: "Montserrat", sans-serif;
+  font-family: Averia Serif Libre;
 }
 
-#C{
-  position: relative;
 
-}
 
 a {
   position: relative;
@@ -93,6 +200,7 @@ a {
   
   text-decoration: none;
   color: var(--fg-color);
+  
   
   border: 2px solid rgb(255, 255, 255);
   
@@ -116,6 +224,53 @@ b{
 
 }
 
+c{
+  position: relative;
+  
+  padding: 0.25rem 1rem;
+  
+  text-decoration: none;
+  color: var(--fg-color);
+  
+  border: 2px solid rgb(255, 255, 255);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+d{
+  position: relative;
+  
+  padding: 0.25rem 1rem;
+  
+  text-decoration: none;
+  color: var(--fg-color);
+  
+  border: 2px solid rgb(255, 255, 255);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+e{
+  position: relative;
+  
+  padding: 0.25rem 1rem;
+  
+  text-decoration: none;
+  color: var(--fg-color);
+  
+  border: 2px solid rgb(255, 255, 255);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
 a::before {
   content: '';
   
@@ -125,7 +280,9 @@ a::before {
   bottom: 0;
   right: 0;
   
+  
   background: var(--default-bg);
+  
   
   z-index: -1;
   
@@ -141,12 +298,87 @@ b::before {
   bottom: 0;
   right: 0;
   
+
   background: var(--default2-bg);
   
   z-index: -1;
   
   transition: clip-path 1000ms ease-out;
 }
+c::before {
+  content: '';
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  
+
+  background: var(--default3-bg);
+  
+  z-index: -1;
+  
+  transition: clip-path 1000ms ease-out;
+}
+d::before {
+  content: '';
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  
+
+  background: var(--default4-bg);
+  
+  z-index: -1;
+  
+  transition: clip-path 1000ms ease-out;
+}
+e::before {
+  content: '';
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  
+
+  background: var(--default5-bg);
+  
+  z-index: -1;
+  
+  transition: clip-path 1000ms ease-out;
+}
+
+a, b, c, d, e {
+            position: relative;
+            padding: 0.25rem 1rem;
+            text-decoration: none;
+            color: var(--fg-color);
+            border: 2px solid rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1; /* Ensures divs are above starry background */
+        }
+
+a::before, b::before, c::before, d::before, e::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+           
+            transition: clip-path 1000ms ease-out;
+}
+
+
 
 
 
@@ -158,6 +390,15 @@ a.slant::before {
 b.slant::before {
   clip-path: path('M0 0C8.33 -8.33 16.67 -12.5 25 -12.5C37.5 -12.5 36.57 -0.27 50 0C63.43 0.27 62.5 -34.37 75 -34.37C87.5 -34.37 87.5 -4.01 100 0C112.5 4.01 112.38 -18.34 125 -18.34C137.62 -18.34 138.09 1.66 150.48 0C162.86 -1.66 162.16 -25 174.54 -25C182.79 -25 191.28 -16.67 200 0L200 200L0 200L0 0Z');
 }
+c.slant::before {
+  clip-path: path('M0 0C8.33 -8.33 16.67 -12.5 25 -12.5C37.5 -12.5 36.57 -0.27 50 0C63.43 0.27 62.5 -34.37 75 -34.37C87.5 -34.37 87.5 -4.01 100 0C112.5 4.01 112.38 -18.34 125 -18.34C137.62 -18.34 138.09 1.66 150.48 0C162.86 -1.66 162.16 -25 174.54 -25C182.79 -25 191.28 -16.67 200 0L200 200L0 200L0 0Z');
+}
+d.slant::before {
+  clip-path: path('M0 0C8.33 -8.33 16.67 -12.5 25 -12.5C37.5 -12.5 36.57 -0.27 50 0C63.43 0.27 62.5 -34.37 75 -34.37C87.5 -34.37 87.5 -4.01 100 0C112.5 4.01 112.38 -18.34 125 -18.34C137.62 -18.34 138.09 1.66 150.48 0C162.86 -1.66 162.16 -25 174.54 -25C182.79 -25 191.28 -16.67 200 0L200 200L0 200L0 0Z');
+}
+e.slant::before {
+  clip-path: path('M0 0C8.33 -8.33 16.67 -12.5 25 -12.5C37.5 -12.5 36.57 -0.27 50 0C63.43 0.27 62.5 -34.37 75 -34.37C87.5 -34.37 87.5 -4.01 100 0C112.5 4.01 112.38 -18.34 125 -18.34C137.62 -18.34 138.09 1.66 150.48 0C162.86 -1.66 162.16 -25 174.54 -25C182.79 -25 191.28 -16.67 200 0L200 200L0 200L0 0Z');
+}
 
 
 a.slant:hover::before {
@@ -166,12 +407,32 @@ a.slant:hover::before {
 b.slant:hover::before {
   clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
 }
+c.slant:hover::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+d.slant:hover::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+e.slant:hover::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+
+
 
 
 a.slant:active::before {
   clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
 }
 b.slant:active::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+c.slant:active::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+d.slant:active::before {
+  clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
+}
+e.slant:active::before {
   clip-path: path('M0 200C8.33 270.83 16.67 306.25 25 306.25C37.5 306.25 36.57 230.98 50 231.25C63.43 231.52 62.5 284.38 75 284.38C87.5 284.38 87.5 208.49 100 212.5C112.5 216.51 112.38 300.41 125 300.41C137.62 300.41 138.09 239.16 150.48 237.5C162.86 235.84 162.16 293.75 174.54 293.75C182.79 293.75 191.28 262.5 200 200L200 200L0 200L0 200Z');
 }
 
@@ -183,13 +444,29 @@ a.liquid::before {
 b.liquid::before {
   clip-path: path('M0 -0.12C8.33 -8.46 16.67 -12.62 25 -12.62C37.5 -12.62 35.91 0.15 50 -0.12C64.09 -0.4 62.5 -34.5 75 -34.5C87.5 -34.5 87.17 -4.45 100 -0.12C112.83 4.2 112.71 -17.95 125 -18.28C137.29 -18.62 137.76 1.54 150.48 -0.12C163.19 -1.79 162.16 -25.12 174.54 -25.12C182.79 -25.12 191.28 -16.79 200 -0.12L200 -34.37L0 -34.37L0 -0.12Z');
 }
-
-
+c.liquid::before {
+  clip-path: path('M0 -0.12C8.33 -8.46 16.67 -12.62 25 -12.62C37.5 -12.62 35.91 0.15 50 -0.12C64.09 -0.4 62.5 -34.5 75 -34.5C87.5 -34.5 87.17 -4.45 100 -0.12C112.83 4.2 112.71 -17.95 125 -18.28C137.29 -18.62 137.76 1.54 150.48 -0.12C163.19 -1.79 162.16 -25.12 174.54 -25.12C182.79 -25.12 191.28 -16.79 200 -0.12L200 -34.37L0 -34.37L0 -0.12Z');
+}
+d.liquid::before {
+  clip-path: path('M0 -0.12C8.33 -8.46 16.67 -12.62 25 -12.62C37.5 -12.62 35.91 0.15 50 -0.12C64.09 -0.4 62.5 -34.5 75 -34.5C87.5 -34.5 87.17 -4.45 100 -0.12C112.83 4.2 112.71 -17.95 125 -18.28C137.29 -18.62 137.76 1.54 150.48 -0.12C163.19 -1.79 162.16 -25.12 174.54 -25.12C182.79 -25.12 191.28 -16.79 200 -0.12L200 -34.37L0 -34.37L0 -0.12Z');
+}
+e.liquid::before {
+  clip-path: path('M0 -0.12C8.33 -8.46 16.67 -12.62 25 -12.62C37.5 -12.62 35.91 0.15 50 -0.12C64.09 -0.4 62.5 -34.5 75 -34.5C87.5 -34.5 87.17 -4.45 100 -0.12C112.83 4.2 112.71 -17.95 125 -18.28C137.29 -18.62 137.76 1.54 150.48 -0.12C163.19 -1.79 162.16 -25.12 174.54 -25.12C182.79 -25.12 191.28 -16.79 200 -0.12L200 -34.37L0 -34.37L0 -0.12Z');
+}
 
 a.liquid:hover::before {
   clip-path: path('M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z');
 }
 b.liquid:hover::before {
+  clip-path: path('M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z');
+}
+c.liquid:hover::before {
+  clip-path: path('M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z');
+}
+d.liquid:hover::before {
+  clip-path: path('M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z');
+}
+e.liquid:hover::before {
   clip-path: path('M0 199.88C8.33 270.71 16.67 306.13 25 306.13C37.5 306.13 35.91 231.4 50 231.13C64.09 230.85 62.5 284.25 75 284.25C87.5 284.25 87.17 208.05 100 212.38C112.83 216.7 112.71 300.8 125 300.47C137.29 300.13 137.76 239.04 150.48 237.38C163.19 235.71 162.16 293.63 174.54 293.63C182.79 293.63 191.28 262.38 200 199.88L200 0.13L0 0.13L0 199.88Z');
 }
 
@@ -201,6 +478,27 @@ a.liquid:active::before {
   );
 }
 b.liquid:active::before {
+  clip-path: ellipse(
+    100% 0%
+    at
+    50% 0%
+  );
+}
+c.liquid:active::before {
+  clip-path: ellipse(
+    100% 0%
+    at
+    50% 0%
+  );
+}
+d.liquid:active::before {
+  clip-path: ellipse(
+    100% 0%
+    at
+    50% 0%
+  );
+}
+e.liquid:active::before {
   clip-path: ellipse(
     100% 0%
     at
@@ -228,6 +526,36 @@ b.wave-link {
   overflow: hidden;
     padding: 7px 0;
 }
+c.wave-link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  overflow: hidden;
+    padding: 7px 0;
+}
+d.wave-link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  overflow: hidden;
+    padding: 7px 0;
+}
+e.wave-link {
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  overflow: hidden;
+    padding: 7px 0;
+}
 
 
 a.wave-link:before {
@@ -241,6 +569,36 @@ a.wave-link:before {
   pointer-events: none;
 }
 b.wave-link:before {
+  content: '';
+  background: #FFF;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+c.wave-link:before {
+  content: '';
+  background: #FFF;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+d.wave-link:before {
+  content: '';
+  background: #FFF;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+e.wave-link:before {
   content: '';
   background: #FFF;
   position: absolute;
@@ -273,6 +631,41 @@ a.wave-link:hover .link__graphic--slide {
 b.wave-link:hover .link__graphic--slide {
   transform: translate3d(-66.6%, 0, 0);
 }
+c.wave-link:hover .link__graphic--slide {
+  transform: translate3d(-66.6%, 0, 0);
+}
+d.wave-link:hover .link__graphic--slide {
+  transform: translate3d(-66.6%, 0, 0);
+}
+e.wave-link:hover .link__graphic--slide {
+  transform: translate3d(-66.6%, 0, 0);
+}
+.quizdiv{
+  height: 900px;
+  color:#0048ff;
+  background-color: #0048ff;
+}
+.lowerdiv{
+  color: white;
+  padding-top: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+
+
+}
+.expection{
+  display:flex;
+
+  
+
+}
+
+
 
                         
                         
@@ -283,44 +676,37 @@ b.wave-link:hover .link__graphic--slide {
 
     </head>
 
-    <body>
+  <body>
+      <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+   
 
-        <div class="upperdiv" >
-            <a href="#"
-                
-                    
-                    href="#"
-                    
-                    class="liquid"
-                    
-                    
-                    
-                    >Socials</a>
+    <script>
+        function generateStars(layerId, count) {
+            let stars = '';
+            for (let i = 0; i < count; i++) {
+                const x = Math.floor(Math.random() * 2000);
+                const y = Math.floor(Math.random() * 2000);
+                stars += `${x}px ${y}px #FFF, `;
+            }
+            document.getElementById(layerId).style.boxShadow = stars.slice(0, -2); // Remove the trailing comma
+        }
 
-                    
-            </a>
+        // Generate the same number of stars as in the SASS code
+        generateStars('stars', 700);  // 700 small stars
+        generateStars('stars2', 200); // 200 medium stars
+        generateStars('stars3', 100); // 100 large stars
+    </script>
 
-            <a href="#"
+    <section>
+
         
-                href="#"
-                class="liquid">Bio</a>
+    </section>
 
-                
-            </a>
 
-            <a href="#"
-        
-                href="#"
-                class="liquid">Resume
-            </a>
+    <section>
 
-            <b  href="#"
-            
-
-                href="#"
-                
-                class="liquid" id="C">bitch
-            </b>
 
 
            
@@ -328,15 +714,84 @@ b.wave-link:hover .link__graphic--slide {
             
 
         </div>
-        
-
         <div class="middiv">
-
+          
+          <img class="profile" src="./images/Screenshot 2024-08-13 at 5.17.13 PM.png"/>
         </div>
 
+        <div class="mid2div">
+          <h1>
+            Hello.
+
+
+          </h1>
+          
+
+
+        </div>
+        <div class="mid2div">
+          <h1>
+            I am a sophemore at University Of Kentucky pursuing computer science, I enjoy web development and ping pong.
+
+
+          </h1>
+          
+
+
+        </div>
+        <div class="lowerdiv">
+          <h1>
+            My Skills
+          </h1>
+          <h1>
+            I have expirience in web development and online design, including HTML, CSS, bootstrap, and
+            several other tools. I am also currently studying computer systems and algorithms.
+          </h1>
+        </div>
+
+
+        <div></div>
+        <div class="upperdiv" >
+           
+
+          <d href="#"
+              href="#"
+              class="liquid" >Github</a>
+          </d>
+          
+
+          <c  href="#"
+            href="#"
+            class="liquid" >Linkedin
+          </c>
+
+          <a href="#"
+              href="#"
+              class="liquid">Instagram
+          </a>
+
+          <b  href="#"
+              href="#"
+              
+              class="liquid" >Snapchat
+          </b>
+
+          <e  href="#"
+              href="#"
+              
+              class="liquid" >Leetcode
+        </e>
+      </div>
+     
+      <div id="title">
+          <span>I'm Milo.</span>
+          <br>
+          <span>A programmer</span>
+      </div>
         
-    </a>
-    
+        
+    </section>
+        
 
         
             
@@ -345,6 +800,6 @@ b.wave-link:hover .link__graphic--slide {
 
 
 
-    </body>
+  </body>
 
 </html>

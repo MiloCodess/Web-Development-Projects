@@ -62,7 +62,7 @@
 
     body {
         font-family: Averia Serif Libre;
-        background: radial-gradient(ellipse at bottom, #627d34 0%, #090A0F 100%);
+        background: radial-gradient(ellipse at bottom, #8bbd5f 0%, #090A0F 100%);
         background-repeat: no-repeat;
         background-attachment: fixed;
         font-weight: 400;
@@ -145,9 +145,33 @@
         color: #ff9605c4;
     }
 
-    
+    #stars, #stars2, #stars3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6000px; /* Increased height to cover more of the page */
+        background: transparent;
+        pointer-events: none;
+    }
 
-   
+    #stars {
+        width: 1px;
+        height: 1px;
+        animation: animStar 50s linear infinite;
+    }
+
+    #stars2 {
+        width: 2px;
+        height: 2px;
+        animation: animStar 100s linear infinite;
+    }
+
+    #stars3 {
+        width: 3px;
+        height: 3px;
+        animation: animStar 150s linear infinite;
+    }
 
     #title {
         font-family: Averia Serif Libre;
@@ -232,7 +256,9 @@
   </div>
 </div>
 
-
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
 <div id="title">
     <span>Milo</span>
     <br>
@@ -284,10 +310,20 @@
     });
   });
 
-  
+  function generateStars(layerId, count) {
+    let stars = '';
+    for (let i = 0; i < count; i++) {
+      const x = Math.floor(Math.random() * 2000);
+      const y = Math.floor(Math.random() * 4000); // Adjusted for the new height
+      stars += `${x}px ${y}px #FFF, `;
+    }
+    document.getElementById(layerId).style.boxShadow = stars.slice(0, -2); // Remove the trailing comma
+  }
 
   // Generate stars
-
+  generateStars('stars', 700);
+  generateStars('stars2', 200);
+  generateStars('stars3', 100);
 </script>
 
 </body>

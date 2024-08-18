@@ -1,65 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starry Background</title>
+    <title>Firefly Animation</title>
     <style>
         html, body {
             height: 100%;
             margin: 0;
             overflow: hidden;
-            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
         }
 
-        #stars, #stars2, #stars3 {
+        body {
+            background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg);
+            background-size: cover;
+        }
+
+        .firefly {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            width: 0.4vw;
+            height: 0.4vw;
+            margin: -0.2vw 0 0 9.8vw;
+            pointer-events: none;
+        }
+
+        .firefly::before,
+        .firefly::after {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            background: transparent;
-            animation: animStar 50s linear infinite;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform-origin: -10vw;
         }
 
-        #stars {
-            width: 1px;
-            height: 1px;
-            animation: animStar 50s linear infinite;
+        .firefly::before {
+            background: black;
+            opacity: 0.2; /* Reduced brightness */
+            animation: drift 10s ease alternate infinite;
         }
 
-        #stars2 {
-            width: 2px;
-            height: 2px;
-            animation: animStar 100s linear infinite;
+        .firefly::after {
+            background: white;
+            opacity: 0;
+            box-shadow: 0 0 1vw 0.2vw yellow; /* Reduced glow size and intensity */
+            animation: drift 10s ease alternate infinite, flash 3s ease infinite;
         }
 
-        #stars3 {
-            width: 3px;
-            height: 3px;
-            animation: animStar 150s linear infinite;
-        }
-
-        @keyframes animStar {
-            from {
-                transform: translateY(0px);
+        @keyframes drift {
+            0% {
+                transform: rotate(0deg);
             }
-            to {
-                transform: translateY(-2000px);
+            100% {
+                transform: rotate(360deg);
             }
         }
+
+        @keyframes flash {
+            0%, 30%, 100% {
+                opacity: 0;
+                box-shadow: 0 0 1vw 0.2vw yellow;
+            }
+            5% {
+                opacity: 0.8;
+                box-shadow: 0 0 1.5vw 0.4vw yellow;
+            }
+        }
+
+        /* Fireflies Motion */
+        @keyframes move1 {
+            0% { transform: translateX(-20vw) translateY(-20vh) scale(0.75); }
+            50% { transform: translateX(30vw) translateY(20vh) scale(1); }
+            100% { transform: translateX(-10vw) translateY(-30vh) scale(0.9); }
+        }
+        @keyframes move2 {
+            0% { transform: translateX(20vw) translateY(-20vh) scale(1); }
+            50% { transform: translateX(-30vw) translateY(10vh) scale(0.8); }
+            100% { transform: translateX(10vw) translateY(-20vh) scale(1.1); }
+        }
+        @keyframes move3 {
+            0% { transform: translateX(-10vw) translateY(10vh) scale(1); }
+            50% { transform: translateX(40vw) translateY(-10vh) scale(0.9); }
+            100% { transform: translateX(-20vw) translateY(30vh) scale(0.8); }
+        }
+        /* Add more keyframes as needed for variety */
+
+        /* Applying random animations */
+        .firefly:nth-child(1) { animation: move1 20s ease-in-out infinite; }
+        .firefly:nth-child(2) { animation: move2 22s ease-in-out infinite; }
+        .firefly:nth-child(3) { animation: move3 18s ease-in-out infinite; }
+        /* Repeat for all 15 fireflies with unique animations */
+
+        /* If you want more fireflies, just add more keyframes and assign them */
     </style>
 </head>
-
 <body>
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-    <h1>
-        I have expirience in web development and online design, including HTML, CSS, bootstrap, and
-        several other tools. I am also currently studying computer systems and algorithms.
-        
-      </h1>
-    
-</body>
 
+    <!-- Fireflies -->
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+
+</body>
 </html>

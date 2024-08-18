@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefly Animation</title>
+    <style>
+        body {
+            background-color: #222222;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .dot {
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            background-color: #ff00cc;
+            box-shadow: 0px 0px 10px 2px #ff00cc;
+            border-radius: 20px;
+            z-index: 2;
+        }
+
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script>
+    var total = 40,
+        container = document.getElementById('container'),
+        w = window.innerWidth,
+        h = window.innerHeight,
+        Tweens = [],
+        SPs = 1;
+
+    for (var i = total; i--;) {
+        var Div = document.createElement('div');
+        gsap.set(Div, {attr: {class: 'dot'}, x: R(w), y: R(h), opacity: 0});
+        container.appendChild(Div);
+        Anim(Div);
+        Tweens.push(Div);
+    }
+
+    function Anim(elm) {
+        elm.Tween = gsap.to(elm, {
+            duration: R(20) + 10,
+            bezier: {values: [{x: R(w), y: R(h)}, {x: R(w), y: R(h)}]},
+            opacity: R(1),
+            scale: R(1) + 0.5,
+            delay: R(2),
+            onComplete: Anim,
+            onCompleteParams: [elm]
+        });
+    }
+
+    for (var i = total; i--;) {
+        Tweens[i].Tween.play();
+    }
+
+    window.addEventListener("resize", resize);
+
+    function R(max) {
+        return Math.random() * max;
+    }
+
+    function resize() {
+        w = window.innerWidth;
+        h = window.innerHeight;
+
+        for (var i = 0; i < total; i++) {
+            var fireFly = Tweens[i];
+            gsap.killTweensOf(fireFly);
+            Anim(fireFly);
+        }
+    }
+</script>
+
+</body>
+</html>

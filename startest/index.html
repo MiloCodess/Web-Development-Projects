@@ -8,7 +8,7 @@
         html, body {
             height: 100%;
             margin: 0;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         body {
@@ -18,12 +18,10 @@
 
         .firefly {
             position: fixed;
-            left: 50%;
-            top: 50%;
             width: 0.4vw;
             height: 0.4vw;
-            margin: -0.2vw 0 0 9.8vw;
             pointer-events: none;
+            animation: drift 20s infinite ease-in-out;
         }
 
         .firefly::before,
@@ -38,67 +36,77 @@
 
         .firefly::before {
             background: black;
-            opacity: 0.2; /* Reduced brightness */
-            animation: drift 10s ease alternate infinite;
+            opacity: 0.2;
         }
 
         .firefly::after {
             background: white;
-            opacity: 0;
-            box-shadow: 0 0 1vw 0.2vw yellow; /* Reduced glow size and intensity */
-            animation: drift 10s ease alternate infinite, flash 3s ease infinite;
+            opacity: 0.8;
+            box-shadow: 0 0 1.5vw 0.4vw yellow;
         }
 
         @keyframes drift {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(10vw, -10vh) rotate(360deg); }
         }
 
-        @keyframes flash {
-            0%, 30%, 100% {
-                opacity: 0;
-                box-shadow: 0 0 1vw 0.2vw yellow;
-            }
-            5% {
-                opacity: 0.8;
-                box-shadow: 0 0 1.5vw 0.4vw yellow;
-            }
-        }
-
-        /* Fireflies Motion */
         @keyframes move1 {
-            0% { transform: translateX(-20vw) translateY(-20vh) scale(0.75); }
-            50% { transform: translateX(30vw) translateY(20vh) scale(1); }
-            100% { transform: translateX(-10vw) translateY(-30vh) scale(0.9); }
+            0%, 100% { transform: translateX(-40vw) translateY(-30vh) scale(1); }
+            50% { transform: translateX(20vw) translateY(20vh) scale(0.8); }
         }
+
         @keyframes move2 {
-            0% { transform: translateX(20vw) translateY(-20vh) scale(1); }
-            50% { transform: translateX(-30vw) translateY(10vh) scale(0.8); }
-            100% { transform: translateX(10vw) translateY(-20vh) scale(1.1); }
+            0%, 100% { transform: translateX(30vw) translateY(40vh) scale(1); }
+            50% { transform: translateX(-30vw) translateY(-20vh) scale(1.1); }
         }
+
         @keyframes move3 {
-            0% { transform: translateX(-10vw) translateY(10vh) scale(1); }
-            50% { transform: translateX(40vw) translateY(-10vh) scale(0.9); }
-            100% { transform: translateX(-20vw) translateY(30vh) scale(0.8); }
+            0%, 100% { transform: translateX(-30vw) translateY(20vh) scale(1); }
+            50% { transform: translateX(40vw) translateY(-40vh) scale(0.9); }
         }
-        /* Add more keyframes as needed for variety */
+
+        @keyframes move4 {
+            0%, 100% { transform: translateX(10vw) translateY(-20vh) scale(0.8); }
+            50% { transform: translateX(-20vw) translateY(30vh) scale(1.2); }
+        }
+
+        @keyframes move5 {
+            0%, 100% { transform: translateX(-20vw) translateY(30vh) scale(1); }
+            50% { transform: translateX(20vw) translateY(-10vh) scale(0.9); }
+        }
 
         /* Applying random animations */
-        .firefly:nth-child(1) { animation: move1 20s ease-in-out infinite; }
-        .firefly:nth-child(2) { animation: move2 22s ease-in-out infinite; }
-        .firefly:nth-child(3) { animation: move3 18s ease-in-out infinite; }
-        /* Repeat for all 15 fireflies with unique animations */
-
-        /* If you want more fireflies, just add more keyframes and assign them */
+        .firefly:nth-child(1) { left: 10%; top: 20%; animation: move1 18s ease-in-out infinite; }
+        .firefly:nth-child(2) { left: 30%; top: 40%; animation: move2 22s ease-in-out infinite; }
+        .firefly:nth-child(3) { left: 50%; top: 60%; animation: move3 20s ease-in-out infinite; }
+        .firefly:nth-child(4) { left: 70%; top: 50%; animation: move4 25s ease-in-out infinite; }
+        .firefly:nth-child(5) { left: 20%; top: 30%; animation: move5 23s ease-in-out infinite; }
+        .firefly:nth-child(6) { left: 40%; top: 70%; animation: move1 26s ease-in-out infinite; }
+        .firefly:nth-child(7) { left: 60%; top: 20%; animation: move2 21s ease-in-out infinite; }
+        .firefly:nth-child(8) { left: 80%; top: 10%; animation: move3 24s ease-in-out infinite; }
+        .firefly:nth-child(9) { left: 90%; top: 60%; animation: move4 19s ease-in-out infinite; }
+        .firefly:nth-child(10) { left: 15%; top: 75%; animation: move5 20s ease-in-out infinite; }
+        .firefly:nth-child(11) { left: 35%; top: 25%; animation: move1 28s ease-in-out infinite; }
+        .firefly:nth-child(12) { left: 55%; top: 45%; animation: move2 27s ease-in-out infinite; }
+        .firefly:nth-child(13) { left: 75%; top: 15%; animation: move3 18s ease-in-out infinite; }
+        .firefly:nth-child(14) { left: 25%; top: 65%; animation: move4 21s ease-in-out infinite; }
+        .firefly:nth-child(15) { left: 45%; top: 35%; animation: move5 19s ease-in-out infinite; }
+        .firefly:nth-child(16) { left: 65%; top: 55%; animation: move1 24s ease-in-out infinite; }
+        .firefly:nth-child(17) { left: 85%; top: 20%; animation: move2 26s ease-in-out infinite; }
+        .firefly:nth-child(18) { left: 95%; top: 50%; animation: move3 23s ease-in-out infinite; }
+        .firefly:nth-child(19) { left: 5%; top: 40%; animation: move4 25s ease-in-out infinite; }
+        .firefly:nth-child(20) { left: 25%; top: 70%; animation: move5 22s ease-in-out infinite; }
     </style>
 </head>
 <body>
 
     <!-- Fireflies -->
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
     <div class="firefly"></div>
     <div class="firefly"></div>
     <div class="firefly"></div>

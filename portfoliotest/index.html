@@ -13,9 +13,104 @@
     @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 </style>
   <style>
+     html, body {
+            height: 100%;
+            margin: 0;
+           
+        }
+
+        body {
+           
+            background-size: cover;
+           
+
+        }
+
+        .firefly {
+            position: fixed;
+            width: 0.4vw;
+            height: 0.4vw;
+            pointer-events: none;
+            animation: drift 20s infinite ease-in-out;
+            
+        }
+
+        .firefly::before,
+        .firefly::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform-origin: -10vw;
+        }
+
+        .firefly::before {
+            background: black;
+            opacity: 0.2;
+        }
+
+        .firefly::after {
+            background: white;
+            opacity: 0.8;
+            box-shadow: 0 0 1.5vw 0.4vw yellow;
+        }
+
+        @keyframes drift {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(10vw, -10vh) rotate(360deg); }
+        }
+
+        @keyframes move1 {
+            0%, 100% { transform: translateX(-40vw) translateY(-30vh) scale(1); }
+            50% { transform: translateX(20vw) translateY(20vh) scale(0.8); }
+        }
+
+        @keyframes move2 {
+            0%, 100% { transform: translateX(30vw) translateY(40vh) scale(1); }
+            50% { transform: translateX(-30vw) translateY(-20vh) scale(1.1); }
+        }
+
+        @keyframes move3 {
+            0%, 100% { transform: translateX(-30vw) translateY(20vh) scale(1); }
+            50% { transform: translateX(40vw) translateY(-40vh) scale(0.9); }
+        }
+
+        @keyframes move4 {
+            0%, 100% { transform: translateX(10vw) translateY(-20vh) scale(0.8); }
+            50% { transform: translateX(-20vw) translateY(30vh) scale(1.2); }
+        }
+
+        @keyframes move5 {
+            0%, 100% { transform: translateX(-20vw) translateY(30vh) scale(1); }
+            50% { transform: translateX(20vw) translateY(-10vh) scale(0.9); }
+        }
+
+        /* Applying random animations */
+        .firefly:nth-child(1) { left: 10%; top: 20%; animation: move1 18s ease-in-out infinite; }
+        .firefly:nth-child(2) { left: 30%; top: 40%; animation: move2 22s ease-in-out infinite; }
+        .firefly:nth-child(3) { left: 50%; top: 60%; animation: move3 20s ease-in-out infinite; }
+        .firefly:nth-child(4) { left: 70%; top: 50%; animation: move4 25s ease-in-out infinite; }
+        .firefly:nth-child(5) { left: 20%; top: 30%; animation: move5 23s ease-in-out infinite; }
+        .firefly:nth-child(6) { left: 40%; top: 70%; animation: move1 26s ease-in-out infinite; }
+        .firefly:nth-child(7) { left: 60%; top: 20%; animation: move2 21s ease-in-out infinite; }
+        .firefly:nth-child(8) { left: 80%; top: 10%; animation: move3 24s ease-in-out infinite; }
+        .firefly:nth-child(9) { left: 90%; top: 60%; animation: move4 19s ease-in-out infinite; }
+        .firefly:nth-child(10) { left: 15%; top: 75%; animation: move5 20s ease-in-out infinite; }
+        .firefly:nth-child(11) { left: 35%; top: 25%; animation: move1 28s ease-in-out infinite; }
+        .firefly:nth-child(12) { left: 55%; top: 45%; animation: move2 27s ease-in-out infinite; }
+        .firefly:nth-child(13) { left: 75%; top: 15%; animation: move3 18s ease-in-out infinite; }
+        .firefly:nth-child(14) { left: 25%; top: 65%; animation: move4 21s ease-in-out infinite; }
+        .firefly:nth-child(15) { left: 45%; top: 35%; animation: move5 19s ease-in-out infinite; }
+        .firefly:nth-child(16) { left: 65%; top: 55%; animation: move1 24s ease-in-out infinite; }
+        .firefly:nth-child(17) { left: 85%; top: 20%; animation: move2 26s ease-in-out infinite; }
+        .firefly:nth-child(18) { left: 95%; top: 50%; animation: move3 23s ease-in-out infinite; }
+        .firefly:nth-child(19) { left: 5%; top: 40%; animation: move4 25s ease-in-out infinite; }
+        .firefly:nth-child(20) { left: 25%; top: 70%; animation: move5 22s ease-in-out infinite; }
+
     .lowerdiv{
     color: white;
-    padding-top: 500px;
+    padding-top: 230px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,6 +118,7 @@
     text-align: center;
     padding-left: 40px;
     padding-right: 40px;
+    font-size: 32.36px;
 
 
     }
@@ -30,28 +126,55 @@
               display: flex;
               justify-content: center;
                 
-                padding-top: 1000px;
+                padding-top: 20px;
                 width: auto;
 
                 
             }
     .profile{
        
-            height: 150px;
-            width: 150px;
+       
+            height: 120px;
+            width: 120px;
             border-radius: 50%;
             z-index: 2;
+            
+            
            
           }
+
     .mid2div{
+            margin-bottom: 0px;
               display: flex;
-              justify-content: center;
+           
+              font-size: 42.36px;
+              
+             
+              
+             
+             
+              
+              width: 389px;
+              color: white;
+              padding-left: 100px;
+
+    }
+    .mid3div{
+              display: flex;
+              font-style: normal;
+              
+             
+              font-size: 20px;
              
               padding-left: 150px;
               padding-right: 150px;
+              padding-top: 0px;
               width: auto;
+
+              
               color: white;
               text-align: center;
+             
 
     }
     
@@ -62,13 +185,16 @@
 
     body {
         font-family: Averia Serif Libre;
-        background: radial-gradient(ellipse at bottom, #8bbd5f 0%, #090A0F 100%);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-image: url("images/finalforest2.png");
+      
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
         font-weight: 400;
         font-style: normal;
       
-        font-size: 34px;
+        font-size: 22px;
     }
 
     .wrapper, .content {
@@ -86,18 +212,26 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: #ff0000;
+        color: yellow;
     }
 
     .intro h1 {
         font-size: 40px;
-        font-family: "Beth Ellen", cursive;
+        font-family: Ave;
+        font-family: Averia Serif Libre;
     }
 
     .intro p {
         font-size: 60px;
         font-family: "Chelsea Market", system-ui;
         font-weight: bolder;
+    }
+    .intro h1:first-child {
+        margin-bottom: 0px; /* Adjust this value to decrease space between Milo Arjana and Scroll */
+    }
+
+    intro h1:last-child {
+        margin-top: 0px; /* Ensures no additional space above Scroll */
     }
 
     .content {
@@ -120,6 +254,7 @@
         perspective: 500px;
         overflow: hidden;
     }
+    
 
     .image-container img {
         width: 100%;
@@ -145,33 +280,9 @@
         color: #ff9605c4;
     }
 
-    #stars, #stars2, #stars3 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 6000px; /* Increased height to cover more of the page */
-        background: transparent;
-        pointer-events: none;
-    }
+    
 
-    #stars {
-        width: 1px;
-        height: 1px;
-        animation: animStar 50s linear infinite;
-    }
-
-    #stars2 {
-        width: 2px;
-        height: 2px;
-        animation: animStar 100s linear infinite;
-    }
-
-    #stars3 {
-        width: 3px;
-        height: 3px;
-        animation: animStar 150s linear infinite;
-    }
+   
 
     #title {
         font-family: Averia Serif Libre;
@@ -188,25 +299,90 @@
         margin-top: -60px;
         padding-left: 10px;
     }
+    body {
+    position: relative;
+}
+
+.dark-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0); /* Start fully transparent */
+        pointer-events: none; /* Allow clicks to pass through */
+        z-index: -2; /* Make sure it's on top of the background image */
+        transition: background 0.3s ease;
+    }
+
+    .content {
+        z-index: 4; /* Ensure content appears above the overlay */
+        position: relative;
+    }
+   
+   
+    .starter{
+        display: flex;
+        flex-direction: column;
+    }
+    .highlight {
+    color: yellow;
+    }
+    .introwhole {
+    display: flex;
+    flex-direction: column;
+}
+
+.introsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Ensures the profile image and text are aligned */
+    gap: 200px; /* This gap can be adjusted as needed */
+}
+
+.secondintro {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Controls the spacing between the sections */
+}
+
 
   
 
-    @keyframes animStar {
-        from {
-            transform: translateY(0px);
-        }
-        to {
-            transform: translateY(-6000px); /* Matches the increased height */
-        }
-    }
+
   </style>
 </head>
 <body>
+    <div class="dark-overlay"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
 
 <div class="wrapper">
   <div class="intro">
-    <h1></h1>
+    <h1>Milo Arjana</h1>
+    <h1>Scroll</h1>
+
   </div>
+  <div class="dark-overlay"></div>
   <div class="content">
     <section class="section hero"></section>
     <section class="section gradient-purple"></section>
@@ -214,39 +390,47 @@
       <div class="test">
      
       </div>
-      <div class="middiv">
+     
+
+    
+      <div class="content">
+        <section class="section hero"></section>
+        <section class="section gradient-purple"></section>
+        <section class="section gradient-blue">
+          <div class="test"></div>
           
-        <img class="profile" src="./images/Screenshot 2024-08-13 at 5.17.13 PM.png"/>
-      </div>
-
-      <div class="mid2div">
-        <h1>
-          Hello.
-
-
-        </h1>
-        
-
-
-      </div>
-      <div class="mid2div">
-        <h1>
-          I am a sophemore at University Of Kentucky pursuing computer science, I enjoy web development and ping pong.
-
-
-        </h1>
-        
-
-
-      </div>
-      <div class="lowerdiv">
-        <h1>
-          My Skills
-        </h1>
-        <h1>
-          I have expirience in web development and online design, including HTML, CSS, bootstrap, and
-          several other tools. I am also currently studying computer systems and algorithms.
-        </h1>
+          <div class="introwhole">
+    
+            <!-- Introduction and Profile Image -->
+            <div class="introsection">
+              <div class="mid2div">
+                <h1>Hi, my <br> name is <span class="highlight">Milo</span></h1>
+              </div>
+              
+              <div>
+                <img class="profile" src="./images/Screenshot 2024-08-13 at 5.17.13 PM.png"/>
+              </div>
+            </div>
+            
+            <!-- About and Skills Sections -->
+            <div class="secondintro">
+              <div class="mid3div">
+                <h1>I am a sophomore at University Of Kentucky  <br> pursuing  <span class="highlight">computer science</span>.</h1>
+              </div>
+    
+              <div class="mid2div">
+                <h1>My Skills</h1>
+              </div>
+              
+              <div class="mid3div">
+                <h1>
+                  I have experience in web development and online design, with a strong command of HTML, CSS, Bootstrap, and various other tools. Additionally, I am currently studying computer systems and algorithms.
+                </h1>
+              </div>
+            </div>
+    
+          </div>
+        </section>
       </div>
 
     </section>
@@ -256,14 +440,27 @@
   </div>
 </div>
 
-<div id="stars"></div>
-<div id="stars2"></div>
-<div id="stars3"></div>
-<div id="title">
-    <span>Milo</span>
-    <br>
-    <span>Arjana</span>
+
+   
 </div>
+<script>
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        var overlay = document.querySelector('.dark-overlay');
+        
+        // Calculate the opacity based on scroll position
+        var maxOpacity = 1; // Maximum darkness
+        var scrollFactor = 4000; // Adjust this value to control when maxOpacity is reached
+        var opacity = Math.min(scrollTop / scrollFactor, maxOpacity);
+        
+        // Apply the calculated opacity
+        overlay.style.background = 'rgba(0, 0, 0, ' + opacity + ')';
+    });
+  </script>
+
+
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
@@ -298,33 +495,19 @@
       "<"
     );
 
-    $(document).ready(function() {
-      $.fn.darkenScroll = function() {
-        var elem = $(this);
-        $(window).on('scroll', function() {
-          var scroll = $(document).scrollTop();
-          var offsetTop = elem.offset().top + elem.outerHeight();
-        });
-      };
-      $('.section.hero').darkenScroll();
-    });
+   
   });
+  
 
-  function generateStars(layerId, count) {
-    let stars = '';
-    for (let i = 0; i < count; i++) {
-      const x = Math.floor(Math.random() * 2000);
-      const y = Math.floor(Math.random() * 4000); // Adjusted for the new height
-      stars += `${x}px ${y}px #FFF, `;
-    }
-    document.getElementById(layerId).style.boxShadow = stars.slice(0, -2); // Remove the trailing comma
-  }
+  
 
   // Generate stars
-  generateStars('stars', 700);
-  generateStars('stars2', 200);
-  generateStars('stars3', 100);
+ 
 </script>
+<script>
+    
+</script>
+
 
 </body>
 </html>

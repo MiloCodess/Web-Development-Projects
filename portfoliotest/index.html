@@ -146,15 +146,18 @@
     .mid2div{
             margin-bottom: 0px;
               display: flex;
+              margin: 0; 
+              padding: 0;
            
-              font-size: 42.36px;
+              font-size: 55px;
+            
               
              
               
              
              
               
-              width: 389px;
+              
               color: white;
               padding-left: 100px;
 
@@ -213,6 +216,9 @@
         justify-content: center;
         align-items: center;
         color: yellow;
+    }
+    .badline{
+        line-height: 1em;
     }
 
     .intro h1 {
@@ -327,17 +333,30 @@
     }
     .highlight {
     color: yellow;
+    font-size: 78px;
+    }
+    .highlight2{
+        color: yellow;
+
     }
     .introwhole {
     display: flex;
     flex-direction: column;
+    color:white;
 }
+
 
 .introsection {
     display: flex;
     flex-direction: row;
     justify-content: flex-start; /* Ensures the profile image and text are aligned */
-    gap: 200px; /* This gap can be adjusted as needed */
+     /* This gap can be adjusted as needed */
+   
+  
+    margin-bottom: 0; 
+    padding-left: 100px;
+    
+  
 }
 
 .secondintro {
@@ -345,6 +364,40 @@
     flex-direction: column;
     gap: 30px; /* Controls the spacing between the sections */
 }
+.under{
+    
+    font-style: normal;
+    font-size: 25px;
+    color: white;
+    margin-top: 0; /* Remove any top margin */
+     /* Adjust line height to control spacing between lines */
+              
+
+}
+.break {
+    display: block; /* Forces line break */
+    margin-bottom: 10px; /* Adjust spacing between lines */
+}
+
+.starter {
+    color: white;
+    padding-left: 150px;
+}
+
+.finaltop {
+    font-size: 78px;
+    color: white;
+}
+
+.final {
+    color: white;
+    font-size: 25px;
+}
+.finaltop br {
+  line-height: 0.5em;
+  margin-bottom: 0.1em;
+}
+
 
 
   
@@ -397,25 +450,31 @@
         <section class="section hero"></section>
         <section class="section gradient-purple"></section>
         <section class="section gradient-blue">
-          <div class="test"></div>
           
           <div class="introwhole">
     
             <!-- Introduction and Profile Image -->
+
             <div class="introsection">
-              <div class="mid2div">
-                <h1>Hi, my <br> name is <span class="highlight">Milo</span></h1>
+              <div >
+                <h1> <span class="finaltop" > <span class="finaltop">Hi, my</span>
+            
+                    <span style="height: 0.5em;"></span>
+                    <span class="finaltop">name         <br> is</span>  </span> <span class="highlight">Milo Arjana</span> <br> <span class="under"> I am a sophomore at University Of Kentucky <br> pursuing  <span class="highlight2">computer science.</span></span>   </h1>
+               
+                    <br>
+               
               </div>
               
               <div>
-                <img class="profile" src="./images/Screenshot 2024-08-13 at 5.17.13 PM.png"/>
+              
               </div>
             </div>
             
             <!-- About and Skills Sections -->
             <div class="secondintro">
               <div class="mid3div">
-                <h1>I am a sophomore at University Of Kentucky  <br> pursuing  <span class="highlight">computer science</span>.</h1>
+               
               </div>
     
               <div class="mid2div">

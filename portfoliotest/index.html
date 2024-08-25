@@ -358,6 +358,9 @@
     
   
 }
+.introsection {
+  margin-top: -1700px;
+}
 
 .secondintro {
     display: flex;
@@ -509,7 +512,7 @@
         
         // Calculate the opacity based on scroll position
         var maxOpacity = 1; // Maximum darkness
-        var scrollFactor = 4000; // Adjust this value to control when maxOpacity is reached
+        var scrollFactor = 3000; // Adjust this value to control when maxOpacity is reached
         var opacity = Math.min(scrollTop / scrollFactor, maxOpacity);
         
         // Apply the calculated opacity
@@ -563,7 +566,48 @@
   // Generate stars
  
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+  window.addEventListener("load", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".wrapper",
+        start: "top top",
+        end: "+=150%",
+        pin: true,
+        scrub: true,
+        markers: false
+      }
+    })
+    .to("img", {
+      scale: 2,
+      z: 250,
+      transformOrigin: "center center",
+      ease: "power1.inOut"
+    })
+    .to(
+      ".section.hero",
+      {
+        scale: 1.4,
+        transformOrigin: "center center",
+        ease: "power1.inOut"
+      },
+      "<"
+    )
+    .to(".intro h1", {
+      opacity: 0,
+      ease: "power1.inOut",
+      stagger: 0.2
+    }, "<");
+  });
+</script>
+<script>
+
+    
     
 </script>
 

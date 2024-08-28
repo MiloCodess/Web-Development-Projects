@@ -153,7 +153,7 @@ to {
           50% { transform: translateX(20vw) translateY(-10vh) scale(0.9); }
       }
 
-      /* Applying random animations */
+      
       .firefly:nth-child(1) { left: 10%; top: 20%; animation: move1 18s ease-in-out infinite; }
       .firefly:nth-child(2) { left: 30%; top: 40%; animation: move2 22s ease-in-out infinite; }
       .firefly:nth-child(3) { left: 50%; top: 60%; animation: move3 20s ease-in-out infinite; }
@@ -273,11 +273,11 @@ to {
       font-weight: bolder;
   }
   .intro h1:first-child {
-      margin-bottom: 0px; /* Adjust this value to decrease space between Milo Arjana and Scroll */
+      margin-bottom: 0px; 
   }
 
   intro h1:last-child {
-      margin-top: 0px; /* Ensures no additional space above Scroll */
+      margin-top: 0px; 
   }
 
   .content {
@@ -286,7 +286,7 @@ to {
 
   .content .section {
       width: 100%;
-      min-height: 100vh;
+      min-height: 30vh;
   }
 
   .image-container {
@@ -355,14 +355,14 @@ to {
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0); /* Start fully transparent */
-      pointer-events: none; /* Allow clicks to pass through */
-      z-index: -2; /* Make sure it's on top of the background image */
+      background: rgba(0, 0, 0, 0);
+      pointer-events: none; 
+      z-index: -2;
       transition: background 0.3s ease;
   }
 
   .content {
-      z-index: 4; /* Ensure content appears above the overlay */
+      z-index: 4;
       position: relative;
   }
  
@@ -395,17 +395,18 @@ to {
   justify-content: flex-start;
   padding-left: 100px;
 
-  position: relative; /* Ensure the parent has relative positioning */
+  position: relative; 
 }
 
 .profile {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  object-fit: cover; /* Maintains the circular shape of the image */
-  flex-shrink: 0; /* Prevents the image from shrinking */
-  margin-left: 800px; /* Adds space between the image and the text */
+  object-fit: cover;
+  flex-shrink: 0; 
+  margin-left: 800px; 
   margin-top: -230px;
+  z-index: 20;
   
 
 
@@ -417,6 +418,8 @@ to {
 .secondintro {
   display: flex;
   flex-direction: column;
+  padding-left: 100px;
+  width: 700px;
  
 }
 .under{
@@ -424,14 +427,14 @@ to {
   font-style: normal;
   font-size: 25px;
   color: white;
-  margin-top: 0; /* Remove any top margin */
-   /* Adjust line height to control spacing between lines */
+  margin-top: 0; 
+   
             
 
 }
 .break {
-  display: block; /* Forces line break */
-  margin-bottom: 10px; /* Adjust spacing between lines */
+  display: block;
+  margin-bottom: 10px;
 }
 
 .starter {
@@ -453,14 +456,58 @@ line-height: 0.5em;
 margin-bottom: 0.1em;
 }
 .vertical-line {
-  width: 1px;
-  height: 500px; /* Initial height */
+  width: 1.5px;
+  height: 500px; 
   background-color: yellow;
   z-index: 10;
   margin-left: 323px;
   margin-top: 100px;
-  transition: height 0.3s ease-out; /* Smooth transition for height change */
+  transition: height 0.3s ease-out; 
 }
+.abouttext {
+    font-size: 30px;
+    color: white;
+    line-height: 1; 
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.aboutme{
+    font-size: 75px;
+    color: white;
+    
+}
+.projects{
+    
+    padding-left: 100px;
+    font-size: 75px;
+
+}
+.dot-container {
+    display: grid;
+    grid-template-columns: repeat(15, 20px); 
+    grid-gap: 15px; 
+    width: fit-content;
+    padding: 20px;
+   
+    z-index: 10;
+    
+    margin-left: 600px; 
+    margin-top: -230px;
+    
+  }
+  
+  .dot {
+    opacity: 0.5;
+    width: 5px;
+    height: 5px;
+    background-color: yellow;
+    z-index: 10;
+  
+   
+    
+    border-radius: 50%;
+    
+  }
 
 
 

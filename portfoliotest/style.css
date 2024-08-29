@@ -492,7 +492,8 @@ margin-bottom: 0.1em;
     z-index: 10;
     
     margin-left: 600px; 
-    margin-top: -230px;
+    margin-top: -103px;
+    position: absolute;
     
   }
   

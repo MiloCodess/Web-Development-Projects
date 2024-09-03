@@ -8,6 +8,8 @@
    html, body {
           height: 100%;
           margin: 0;
+          scroll-behavior: smooth;
+
          
       }
 
@@ -464,8 +466,17 @@ margin-bottom: 0.1em;
   margin-top: 100px;
   transition: height 0.3s ease-out; 
 }
+.vertical-line2 {
+    width: 1.5px;
+    height: 600px; 
+    background-color: yellow;
+    z-index: 10;
+    margin-left: 550px;
+    margin-top: 100px;
+    transition: height 0.3s ease-out; 
+  }
 .horizontal-line {
-    width: 1200px;
+    width: 1088px;
     height: 1.5px; 
     background-color: yellow;
     z-index: 10;
@@ -494,7 +505,7 @@ margin-bottom: 0.1em;
 .dot-container {
     display: grid;
     grid-template-columns: repeat(10, 25px); 
-    grid-gap: 15px; 
+    grid-gap: 16px; 
     width: fit-content;
     padding: 20px;
    
@@ -521,10 +532,33 @@ margin-bottom: 0.1em;
   .personalpro{
     font-size: 75px;
     color: white;
-    margin-left: 800px;
+    margin-left: 400px;
+    margin-top: 710px;
 
   }
+  .projectsection{
+    padding-left: 450px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 100px;
 
+  }
+  .items{
+    width: 200px;
+    height: 100px;
+    font-size: 5rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blueviolet;
+    
+    /* Solution */
+  
+ 
+   
+
+  }
+  
 
 
 

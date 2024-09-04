@@ -540,7 +540,8 @@ margin-bottom: 0.1em;
   
     display:flex;
     flex-direction: row;
-    gap: 400px;
+    flex-wrap: wrap;
+    
  
     
 
